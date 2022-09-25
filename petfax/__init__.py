@@ -7,5 +7,7 @@ def create_app():
     def index():
         return ' Hello, PetFax, from Jenni'
     
-    
+    from . import pet
+    app.register_blueprint(pet.bp)
+
     return app
